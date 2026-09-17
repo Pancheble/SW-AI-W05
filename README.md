@@ -146,7 +146,7 @@ gdb ./build/06_null_deref        # 디버거 시작
 (gdb) run                        # 실행 → 버그 코드는 여기서 크래시
 (gdb) bt                         # 백트레이스: 어느 함수/라인에서 죽었는지
 (gdb) frame 1                    # 특정 스택 프레임으로 이동
-(gdb) print 변수                 # 변수/포인터 값 확인 (예: print p, print i)
+(gdb) print 변수                  # 변수/포인터 값 확인 (예: print p, print i)
 (gdb) info locals                # 현재 프레임의 지역 변수 전부
 (gdb) list                       # 크래시 지점 주변 소스 보기
 ```
@@ -154,7 +154,7 @@ gdb ./build/06_null_deref        # 디버거 시작
 메모리 버그 추적에 유용한 명령:
 
 ```bash
-(gdb) break 파일:라인            # 특정 라인에 브레이크포인트
+(gdb) break 파일:라인             # 특정 라인에 브레이크포인트
 (gdb) watch 변수                 # 값이 바뀌는 순간 멈춤
 (gdb) x/8xg 포인터               # 포인터가 가리키는 메모리를 8워드 헥사로 덤프
 (gdb) p (long)포인터 - (long)기준 # 두 포인터의 오프셋(경계 초과 판단)
